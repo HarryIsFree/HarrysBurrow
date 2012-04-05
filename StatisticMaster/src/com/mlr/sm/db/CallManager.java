@@ -1,16 +1,15 @@
 package com.mlr.sm.db;
 
-import java.util.ArrayList;
-
-import com.lx.sm.model.Call;
-import com.lx.sm.model.Constants;
-
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.CallLog;
+import com.lx.sm.model.Call;
+import com.lx.sm.model.Constants;
+
+import java.util.ArrayList;
 
 public class CallManager {
 

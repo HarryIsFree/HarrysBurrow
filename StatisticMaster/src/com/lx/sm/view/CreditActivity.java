@@ -1,11 +1,10 @@
 package com.lx.sm.view;
 
-import com.lx.sm.util.adapters.CreditListAdapter;
-
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ListView;
+import com.lx.sm.util.adapters.CreditListAdapter;
 
 public class CreditActivity extends Activity{
 

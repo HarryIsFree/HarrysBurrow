@@ -1,16 +1,15 @@
 package com.mlr.sm.db;
 
-import java.util.ArrayList;
-
-import com.lx.sm.model.Constants;
-import com.lx.sm.model.Message;
-
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import com.lx.sm.model.Constants;
+import com.lx.sm.model.Message;
+
+import java.util.ArrayList;
 
 public class MessageManager {
 	private static ContentResolver cr;

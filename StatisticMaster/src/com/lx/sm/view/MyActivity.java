@@ -1,14 +1,9 @@
 package com.lx.sm.view;
 
-import com.lvxiang.sm.util.BatteryUtil;
-import com.lvxiang.sm.util.CallUtil;
-import com.lvxiang.sm.util.CreditUtil;
-import com.lvxiang.sm.util.MessageUtil;
-import com.lvxiang.sm.util.SDCardUtil;
-
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.util.DisplayMetrics;
+import com.lvxiang.sm.util.*;
 
 public abstract class MyActivity extends Activity{
 	

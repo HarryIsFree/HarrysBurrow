@@ -1,7 +1,5 @@
 package com.lx.sm.custom;
 
-import com.lx.sm.view.R;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;

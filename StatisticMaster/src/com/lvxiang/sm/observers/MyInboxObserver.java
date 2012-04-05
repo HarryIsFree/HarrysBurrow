@@ -1,9 +1,8 @@
 package com.lvxiang.sm.observers;
 
-import com.lx.sm.model.Constants;
-
 import android.database.ContentObserver;
 import android.os.Handler;
+import com.lx.sm.model.Constants;
 
 public class MyInboxObserver extends ContentObserver{
 

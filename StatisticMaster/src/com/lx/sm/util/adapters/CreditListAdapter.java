@@ -1,15 +1,14 @@
 package com.lx.sm.util.adapters;
 
-import java.util.ArrayList;
-
-import com.lx.sm.view.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import com.lx.sm.view.R;
+
+import java.util.ArrayList;
 
 public class CreditListAdapter extends BaseAdapter{
 

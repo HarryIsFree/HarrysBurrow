@@ -1,31 +1,18 @@
 package com.lx.sm.view;
 
-import com.lvxiang.sm.util.CallUtil;
-import com.lx.sm.model.Constants;
-import com.lx.sm.util.adapters.MyListAdapter;
-
-import android.app.Activity;
 import android.graphics.Color;
-import android.inputmethodservice.KeyboardView.OnKeyboardActionListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
-import android.widget.TextView;
+import com.lx.sm.util.adapters.MyListAdapter;
 
 public class CallStatsActivity extends MyActivity implements Callback{
 

@@ -1,18 +1,15 @@
 package com.lvxiang.sm.util;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.lx.sm.model.Constants;
-
 import android.content.Context;
 import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+import com.lx.sm.model.Constants;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SDCardUtil implements UtilInterface{
 	

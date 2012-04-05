@@ -1,10 +1,9 @@
 package com.lx.sm.view;
 
-import com.lx.sm.model.Constants;
-
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import com.lx.sm.model.Constants;
 
 public class FileListActivity extends ListActivity{
 

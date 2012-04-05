@@ -1,20 +1,5 @@
 package com.lvxiang.sm.util;
 
-import java.sql.Date;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
-import java.util.Set;
-
-import com.lvxiang.sm.observers.MyCalldbObserver;
-import com.lx.sm.model.Call;
-import com.lx.sm.model.Constants;
-import com.lx.sm.model.DataItem;
-import com.lx.sm.view.R;
-import com.mlr.sm.db.CallManager;
-
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -23,6 +8,19 @@ import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
 import android.provider.CallLog;
+import com.lvxiang.sm.observers.MyCalldbObserver;
+import com.lx.sm.model.Call;
+import com.lx.sm.model.Constants;
+import com.lx.sm.model.DataItem;
+import com.lx.sm.view.R;
+import com.mlr.sm.db.CallManager;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class CallUtil implements UtilInterface,Callback{
 

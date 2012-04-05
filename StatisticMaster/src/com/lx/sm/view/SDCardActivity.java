@@ -1,10 +1,5 @@
 package com.lx.sm.view;
 
-import com.lx.sm.custom.MyDialog;
-import com.lx.sm.model.Constants;
-import com.lx.sm.util.adapters.SDListAdapter;
-
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,13 +9,11 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
+import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+import com.lx.sm.custom.MyDialog;
+import com.lx.sm.model.Constants;
+import com.lx.sm.util.adapters.SDListAdapter;
 
 public class SDCardActivity extends MyActivity implements Callback{
 	

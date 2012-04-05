@@ -1,11 +1,10 @@
 package com.lvxiang.sm.util;
 
-import java.util.ArrayList;
-
-import com.lx.sm.model.Credit;
-
 import android.content.Context;
 import android.os.Handler;
+import com.lx.sm.model.Credit;
+
+import java.util.ArrayList;
 
 public class CreditUtil implements UtilInterface{
 

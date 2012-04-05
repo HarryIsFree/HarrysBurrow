@@ -1,7 +1,5 @@
 package com.lx.sm.view;
 
-import com.lx.sm.model.Constants;
-
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.lx.sm.model.Constants;
 
 public class BatteryActivity extends MyActivity implements Callback{
 

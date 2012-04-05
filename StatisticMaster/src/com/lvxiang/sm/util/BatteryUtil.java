@@ -1,7 +1,5 @@
 package com.lvxiang.sm.util;
 
-import com.lx.sm.model.Constants;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +8,7 @@ import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import com.lx.sm.model.Constants;
 
 public class BatteryUtil {
 

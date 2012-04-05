@@ -1,10 +1,5 @@
 package com.lvxiang.sm.util;
 
-import com.lvxiang.sm.observers.MyInboxObserver;
-import com.lvxiang.sm.observers.MyOutBoxObserver;
-import com.lx.sm.model.Constants;
-import com.mlr.sm.db.MessageManager;
-
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.ContentObserver;
@@ -12,6 +7,10 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
+import com.lvxiang.sm.observers.MyInboxObserver;
+import com.lvxiang.sm.observers.MyOutBoxObserver;
+import com.lx.sm.model.Constants;
+import com.mlr.sm.db.MessageManager;
 
 public class MessageUtil implements UtilInterface,Callback{
 

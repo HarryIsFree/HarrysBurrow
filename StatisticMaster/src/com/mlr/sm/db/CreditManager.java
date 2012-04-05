@@ -1,8 +1,8 @@
 package com.mlr.sm.db;
 
-import java.util.ArrayList;
-
 import com.lx.sm.model.Credit;
+
+import java.util.ArrayList;
 
 public class CreditManager {
 
