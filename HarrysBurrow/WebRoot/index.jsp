@@ -9,9 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>Burrow of Harry Lv</title>
 	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache"> 
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
@@ -34,5 +34,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		<a href="MIUI/miui.html"><font id="miui_text" class="text">Have a look at my MIUI in pure CSS.</font></a><br>
     		
   	</div>
+  	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F53fd752a54d5fc835778b3f5262689a7' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+  	
   </body>
 </html>
