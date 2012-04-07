@@ -1,34 +1,65 @@
 body{
-	background:-webkit-gradient(radial,50% 50%,0,50% 50%,1000,from(#fff),to(#000));
+	background:-webkit-gradient(radial,50% 50%,0,50% 50%,1500,from(#fff),to(#000));
+	background:-moz-radial-gradient(circle farthest-side,white,#808080);
+	background:-op-radial-gradient(circle farthest-side,white,#808080);
+	background:radial-gradient(circle farthest-side,white,#808080);
 	text-align:center;
 }
+#alert_bar{
+	display:none;
+}
 #main{
 	
 	
 }
-#construction_pic{
-	width:75px;
-	height: 75px;
-	border: 5px solid #444;
+.window{
+	width:300px;
+	height:200px;
+	text-align:center;
+	background: #fff;
+	border: solid 1px #808080;
+	border-radius: 10px;
+	
+	-webkit-box-shadow: 2px 2px 5px #969696;
+	-moz-box-shadow:    2px 2px 5px #969696; 
+	-op-box-shadow:     2px 2px 5px #969696;
+	-ms-box-shadow:		2px 2px 5px #969696;
+	box-shadow:			2px 2px 5px #969696;	
+	
+	margin: auto;
 }
-#main{
-	vertical-align:center;
+.window:hover{
+	cursor:pointer;
 }
-#miui_pic{
-	width: 75px;
-	height: 125px;
-	border: 5px solid #444;
+.window_cover{
+	width: 280px;
+	height: 150px;
+	background: #909090;
+	border: solid 1px #808080;
+	overflow: hidden;
+	
+	position: relative;
+	top: 10px;
+	left: 10px;
 }
-.text{
-	position:relative;
-	top: -40px;
+.window_title{
+	margin-top: 15px;
 	font-family: 'Arial Black';
-	font-size: 1.5em;
 }
-#construction_text{
-
+#intro{
+	width: 100%;
 }
-#miui_text{
-	
-	
+#what{
+	position:relative;
+	left:-200px;
+	top: 0px;
+}
+#who{
+	position:relative;
+	left:200px;
+	top: -202px;
+}
+#dialog{
+	display: none;
+	width:80%;
 }

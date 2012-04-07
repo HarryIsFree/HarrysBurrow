@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
 <%@ page language="java" import="net.harrysburrow.DAO.*" %>
 <%@ page language="java" import="net.harrysburrow.Security.*" %>
+<%@ page language="java" import="net.harrysburrow.Bean.*" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -21,30 +22,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 	<link type="text/css" rel="stylesheet" href="stylesheets/index/index.css"/>
-	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="scripts/index/index.js"></script>
 	
   </head>
   
-  <body>
-  
-  	<%
-  		//deal with the request check if it is valid and store it into database logs
-		//first log this request
-		BurrowDAO burrowDAO = new BurrowDAO();
-		burrowDAO.log(request);
-		//second check if it's valid or contains illegal arguments
-		if(!AntiBadRequest.isLegalRequest(request)){
-			//do something to prevent the invader from going on.
+  <body> 
+   
+  	<% 
+  		//deal with the request check if it is valid and store it into database logs 
+		//first log this request 
+		BurrowDAO burrowDAO = new BurrowDAO(); 
+		burrowDAO.log(request); 
+		//second check if it's valid or contains illegal arguments 
+		if(!AntiBadRequest.isLegalRequest(request)){ 
+			//do something to prevent the invader from going on. 
 			%>
 			<script type="text/javascript">
 				window.location = 'http://harrysburrow.net';
 			</script>
 			<%
 		}
-		else
+		else{
 			burrowDAO.addView();
+			//ArrayList<Blog> blogs = burrowDAO.getBlogs();
+		}
   	 %>
+  	 
+  	 <div class="ui-widget" id="alert_bar">
+
+			<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;"> 
+
+				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
+
+				<strong>Alert:</strong> Your browser does not support all features of this page, please use chrome safari or firefox.</p>
+
+			</div>
+
+	</div>
+  	 
   	
   	<div id="title">
   		<br><img src="img/index/logo.png">
@@ -52,12 +71,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   	<div id="main">
   	
-  		<img src="img/index/construction.jpg" id="construction_pic"/>
-  			<font id="construction_text" class="text">This page is under construction.</font><br>
+  		<div id="intro">
+  			<div id="what" class="window">
+  				<div class="window_cover">
+  					<img src="img/index/burrow.jpg" width="250" height="300" />
+  				</div>
+  				
+  				<div class="window_title">
+  					<font>What's This ?</font>
+  				</div>
+  			</div>
+  		
+  			<div id="who" class="window">
+  				<div class="window_cover">
+  				</div>
+  				
+  				<div class="window_title">
+  					<font>Who Created This?</font>
+  				</div>
+  			</div>
+  		</div>
+  		
+  		<div id="content">
+  			<%
   			
-    	<img src="img/index/miui.jpg" id="miui_pic"/>
-    		<a href="MIUI/miui.html"><font id="miui_text" class="text">Have a look at my MIUI in pure CSS.</font></a><br>
-    		
+  			 %>
+  		</div>
+  	</div>
+  	
+  	<div id="dialog">
+  	
   	</div>
   	
   	<div id="footer" style="margin-top:150px">
@@ -68,5 +111,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F53fd752a54d5fc835778b3f5262689a7' type='text/javascript'%3E%3C/script%3E"));
 	</script>
+	
   </body>
 </html>

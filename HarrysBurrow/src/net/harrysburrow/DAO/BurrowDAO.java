@@ -5,8 +5,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
+
+import net.harrysburrow.Bean.Blog;
 
 public class BurrowDAO {
 
@@ -35,6 +39,16 @@ public class BurrowDAO {
 	
 	private static final String GET_VIEW   = "SELECT " + TABLE_STATS_VIEWS + " FROM " + TABLE_STATS + " WHERE " + TABLE_STATS_ID + " = 1";
 	private static final String ADD_VIEW   = "UPDATE " + TABLE_STATS + " SET " + TABLE_STATS_VIEWS + " = ? WHERE " + TABLE_STATS_ID + " = 1";
+	
+	private static final String TABLE_BLOG 				= "burrow_blog";
+	private static final String TABLE_BLOG_ID			= "id";
+	private static final String TABLE_BLOG_TITLE		= "title";
+	private static final String TABLE_BLOG_CONTENT		= "content";
+	private static final String TABLE_BLOG_TIME			= "ptime";
+	private static final String TABLE_BLOG_DIGEST		= "digest";
+	private static final String GET_BLOGS			= "SELECT * FROM " + TABLE_BLOG;
+	//private static final String GET_BLOG			= "SELECT * FROM " + TABLE_BLOG + " WHERE " 
+	
 	
 	public BurrowDAO(){
 		
@@ -98,6 +112,30 @@ public class BurrowDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+	}
+	
+	public ArrayList<Blog> getBlogs(){
+		
+		ArrayList<Blog> blogs = new ArrayList<Blog>();
+		try {
+			Statement stmt = connection.createStatement();
+			ResultSet rs = stmt.executeQuery(GET_BLOGS);
+			while(rs.next()){
+				Blog b = new Blog();
+				b.setID(rs.getInt(TABLE_BLOG_ID));
+				b.setTitle(rs.getString(TABLE_BLOG_TITLE));
+				b.setContent(rs.getString(TABLE_BLOG_CONTENT));
+				b.setDate(rs.getDate(TABLE_BLOG_TIME));
+				b.setDigest(rs.getString(TABLE_BLOG_DIGEST));
+				blogs.add(b);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return blogs;
 		
 	}
 }
