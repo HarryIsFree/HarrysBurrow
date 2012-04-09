@@ -3,12 +3,11 @@ body{
 	background:-moz-radial-gradient(circle farthest-side,white,#808080);
 	background:-op-radial-gradient(circle farthest-side,white,#808080);
 	background:radial-gradient(circle farthest-side,white,#808080);
-	text-align:center;
 }
 #header{
 	width: 100%;
 	height: 40px;
-	
+	text-align:right;
 	position:absolute;
 	top: 0px;
 	left: 0px;
@@ -24,6 +23,9 @@ body{
 }
 #alert_bar{
 	display:none;
+}
+#title{
+	text-align:center;
 }
 #main{
 	
@@ -76,10 +78,6 @@ body{
 	left:200px;
 	top: -202px;
 }
-#dialog{
-	display: none;
-	width:80%;
-}
 #mask{
 	position:absolute;
 	left: 0px;
@@ -87,11 +85,24 @@ body{
 	width: 100%;
 	height: 100%;
 	display: none;
-	background: rgba(80,80,80,0.5);
+	background: rgba(60,60,60,0.6);
+}
+#loading{
+	width: 200px;
+	height:145px;
+	position:absolute;
+	left:50%;
+	margin-left:-100px;
+	top:50%;
+	margin-top:-72px;
+	display:none;
+	text-align:center;
+	border: 5px solid rgba(20,20,20,0.2);
 }
 #dialog{
 	position:absolute;
 	width: 900px;
+	display:none;
 	
 	top: 100px;
 	left: 50%;
@@ -104,6 +115,12 @@ body{
 	box-shadow: 		2px 2px 8px #303030;
 	
 	background: #fff;
-	text-align: center;
 	
+}
+#dialog_close{
+	position:absolute;
+	top:  0px; 
+	left: 870px;
+	width:  30px;
+	height: 30px;
 }
