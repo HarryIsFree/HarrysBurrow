@@ -20,7 +20,7 @@ public class BurrowDAO {
 	
 	// The table burrow_log and its collumes.
 	private static final String TABLE_LOG    		= "burrow_log";
-	private static final String TABLE_LOG_ID 		= "id";
+	//private static final String TABLE_LOG_ID 		= "id";
 	private static final String TABLE_LOG_IP 		= "ip";
 	private static final String TABLE_LOG_REQUEST	= "request";
 	private static final String TABLE_LOG_TIME		= "rtime";
