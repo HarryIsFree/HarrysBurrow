@@ -5,6 +5,23 @@ body{
 	background:radial-gradient(circle farthest-side,white,#808080);
 	text-align:center;
 }
+#header{
+	width: 100%;
+	height: 40px;
+	
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	
+	background: #000;
+	background:-webkit-gradient(linear,0% 0%,0% 100%,from(#000),to(#444)); 
+	
+	border-bottom: 1px solid #000;
+}
+#renren{
+	float:right;
+	margin-top: 10px;
+}
 #alert_bar{
 	display:none;
 }
@@ -62,4 +79,31 @@ body{
 #dialog{
 	display: none;
 	width:80%;
+}
+#mask{
+	position:absolute;
+	left: 0px;
+	top:  0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: rgba(80,80,80,0.5);
+}
+#dialog{
+	position:absolute;
+	width: 900px;
+	
+	top: 100px;
+	left: 50%;
+	margin-left: -450px;
+	
+	-webkit-box-shadow: 2px 2px 8px #303030;
+	-moz-box-shadow: 	2px 2px 8px #303030;
+	-op-box-shadow: 	2px 2px 8px #303030;
+	-ms-box-shadow: 	2px 2px 8px #303030;
+	box-shadow: 		2px 2px 8px #303030;
+	
+	background: #fff;
+	text-align: center;
+	
 }

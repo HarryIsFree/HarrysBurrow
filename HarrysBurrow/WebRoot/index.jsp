@@ -26,20 +26,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/utils.js"></script>
 	<script type="text/javascript" src="scripts/index/index.js"></script>
 	
   </head>
   
   <body> 
    
-  	<% 
-  		//deal with the request check if it is valid and store it into database logs 
-		//first log this request 
-		BurrowDAO burrowDAO = new BurrowDAO(); 
-		burrowDAO.log(request); 
-		//second check if it's valid or contains illegal arguments 
-		if(!AntiBadRequest.isLegalRequest(request)){ 
-			//do something to prevent the invader from going on. 
+  	<%  
+  		//deal with the request check if it is valid and store it into database logs  
+		//first log this request  
+		//BurrowDAO burrowDAO = new BurrowDAO();  
+		//burrowDAO.log(request);  
+		//second check if it's valid or contains illegal arguments  
+		if(!AntiBadRequest.isLegalRequest(request)){  
+			//do something to prevent the invader from going on.  
 			%>
 			<script type="text/javascript">
 				window.location = 'http://harrysburrow.net';
@@ -47,10 +48,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<%
 		}
 		else{
-			burrowDAO.addView();
+			//burrowDAO.addView();
 			//ArrayList<Blog> blogs = burrowDAO.getBlogs();
 		}
   	 %>
+  	 <div id="header">
+  	 	<iframe scrolling="no" frameborder="0" allowtransparency="true" src="http://www.connect.renren.com/like?url=http%3A%2F%2Fharrysburrow.net&showfaces=false" style="width: 120px;height: 40px;"></iframe>
+  	 </div>
   	 
   	 <div class="ui-widget" id="alert_bar">
 
@@ -99,9 +103,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		</div>
   	</div>
   	
+  	<div id="mask">
+  		
+  	</div>
   	<div id="dialog">
   	
   	</div>
+  	<div id="temp"></div>
   	
   	<div id="footer" style="margin-top:150px">
   		<font style="font-family:'Arial';font-size:0.5em">©2012 <b>HarryLv</b> | Contact me at <b>1992donkey@gmail.com</b></font>
