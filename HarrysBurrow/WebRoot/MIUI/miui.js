@@ -6,7 +6,8 @@ var mouse_y;
 var drag = false;
 var init_margin  = 414;
 var slide_margin = 414; 
-var weekdays = ["æ˜ŸæœŸä¸€","æ˜ŸæœŸäºŒ","æ˜ŸæœŸä¸‰","æ˜ŸæœŸå››","æ˜ŸæœŸäº”","æ˜ŸæœŸå…­","æ˜ŸæœŸå¤©"];
+var weekdays = ["ÐÇÆÚÒ»","ÐÇÆÚ¶þ","ÐÇÆÚÈý","ÐÇÆÚÎå","ÐÇÆÚÁù","ÐÇÆÚÌì"];
+
 
 // State whether the phone is locked.
 var locked = false;
@@ -26,7 +27,7 @@ function setTime(){
 	$('.time').html(t);
 	$('.time_dc').html(t);
 	
-	var date = (d.getMonth()+1)+"æœˆ"+d.getDate()+"æ—¥"+"&nbsp"+weekdays[d.getDay()];
+	var date = (d.getMonth()+1)+"ÔÂ"+d.getDate()+"ÈÕ"+"&nbsp"+weekdays[d.getDay()];
 	$('.time_date').html(date);
 	
 	angle_h = d.getHours()%12 * 30 + 0.5*(d.getMinutes()%60) + "deg";
@@ -132,7 +133,7 @@ function events(){
 				init_margin = slide_margin;
 			}
 			else if(init_margin>slide_margin+240){
-				init_margin = slide_margin+240;
+				unlock();
 			}
 			$('.slide_unlock').css('margin-top',init_margin+"px");
 			mouse_y = evt.pageY;
@@ -156,16 +157,18 @@ function events(){
 // Lock the phone
 function lock(){
 	$('.status_bar').css('background','transparent');
-	$('.clock_div').css('opacity',0);
-	$('.bottom').css('opacity',0);
+	$('.clock_div').animate({opacity:"0"},1000);
+	$('.bottom').animate({opacity:"0"},1000);
+	$('.time_zone').animate({opacity:"1"},1000);
+	$('.slide_unlock').animate({opacity:"1"},1000);
 }
 
 // Unlock the phone
 function unlock(){
 	$('.status_bar').css('background','rgba(54,54,54,0.7)');
-	$('.clock_div').css('opacity',1);
-	$('.bottom').css('opacity',1);
+	$('.clock_div').animate({opacity:"1"},1000);
+	$('.bottom').animate({opacity:"1"},1000);
 	$('.slide_unlock').css('opacity',0);
-	$('.slide_unlock').css('margin-top','402px');
-	$('.time_zone').css('opacity',0);
+	$('.slide_unlock').css('margin-top','414px');
+	$('.time_zone').animate({opacity:"0"},1000);
 }
