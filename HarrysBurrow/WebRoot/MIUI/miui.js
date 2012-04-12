@@ -4,9 +4,9 @@ var flow_st = 0;
 var mouse_x;
 var mouse_y;
 var drag = false;
-var init_margin  = 402;
-var slide_margin = 402; 
-var weekdays = ["ÖÜÈÕ","ĞÇÆÚÒ»","ĞÇÆÚ¶ş","ĞÇÆÚÈı","ĞÇÆÚËÄ","ĞÇÆÚÎå","ĞÇÆÚÁù"];
+var init_margin  = 414;
+var slide_margin = 414; 
+var weekdays = ["æ˜ŸæœŸä¸€","æ˜ŸæœŸäºŒ","æ˜ŸæœŸä¸‰","æ˜ŸæœŸå››","æ˜ŸæœŸäº”","æ˜ŸæœŸå…­","æ˜ŸæœŸå¤©"];
 
 // State whether the phone is locked.
 var locked = false;
@@ -26,7 +26,7 @@ function setTime(){
 	$('.time').html(t);
 	$('.time_dc').html(t);
 	
-	var date = (d.getMonth()+1)+"ÔÂ"+d.getDate()+"ÈÕ"+"&nbsp"+weekdays[d.getDay()];
+	var date = (d.getMonth()+1)+"æœˆ"+d.getDate()+"æ—¥"+"&nbsp"+weekdays[d.getDay()];
 	$('.time_date').html(date);
 	
 	angle_h = d.getHours()%12 * 30 + 0.5*(d.getMinutes()%60) + "deg";

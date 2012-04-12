@@ -68,15 +68,12 @@ body{
 #intro{
 	width: 100%;
 }
-#what{
-	position:relative;
-	left:-200px;
-	top: 0px;
+table{
+	margin:auto;
 }
-#who{
-	position:relative;
-	left:200px;
-	top: -202px;
+td.index{
+	width: 400px;
+	height: 200px;
 }
 #mask{
 	position:absolute;
