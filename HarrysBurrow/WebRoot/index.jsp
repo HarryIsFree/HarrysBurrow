@@ -97,28 +97,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		</div>
   		
   		<div id="content">
-  			<%
   			
-  			 %>
   		</div>
   	</div>
   	
   	<div id="mask">
-  		
   	</div>
-  	<div id="dialog">
   	
+  	<div id="loading">
+  		<img src="img/index/loading.gif" style="margin:auto;"/>
   	</div>
+  	
+  	<div id="dialog">
+  		<div id="dialog_close">
+  			<img src="img/index/close.jpg" id="close"/>
+  		</div>
+  		
+  		<div id="dialog_content">
+  		</div>
+  	</div>
+  	
   	<div id="temp"></div>
   	
-  	<div id="footer" style="margin-top:150px">
+  	<div id="footer" style="margin-top:150px;text-align:center;">
   		<font style="font-family:'Arial';font-size:0.5em">©2012 <b>HarryLv</b> | Contact me at <b>1992donkey@gmail.com</b></font>
+  		  	<script type="text/javascript">
+				var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+				document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F53fd752a54d5fc835778b3f5262689a7' type='text/javascript'%3E%3C/script%3E"));
+			</script>
   	</div>
   	
-  	<script type="text/javascript">
-		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F53fd752a54d5fc835778b3f5262689a7' type='text/javascript'%3E%3C/script%3E"));
-	</script>
 	
   </body>
 </html>

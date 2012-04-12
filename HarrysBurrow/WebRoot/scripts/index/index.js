@@ -9,11 +9,11 @@ $(document).ready(function(){
 });
 
 function adjustElements(){
-	
 	// adjust the height of mask
 	var bHeight = $('body').height();
 	var wHeight = $(window).height();
 	var mHeight = bHeight>wHeight?bHeight:wHeight;
+	mHeight += 20;
 	$('#mask').css('height',mHeight);
 	
 }
@@ -46,13 +46,26 @@ function bindEvents(){
 		}
 		
 	});
+	
+	$('#close').mouseenter(function(){
+		$('#close').attr('src','img/index/close_over.jpg');
+	});
+	$('#close').mousedown(function(){
+		$('#close').attr('src','img/index/close_pressed.jpg');
+	});
+	$('#close').mouseout(function(){
+		$('#close').attr('src','img/index/close.jpg');
+	});
+	$('#close').click(function(){
+		dismissDialog();
+	});
 }
 
 function getContent(ID){
-	$('#mask').css('display','block');
-	$('#dialog').css('display','block');
-	//$('#temp').html(BASE64.encode('servlet/ContentServlet'));
+	// decode url
 	var deurl = BASE64.decode(enurl);
+	$('#mask').fadeIn('fast');
+	$('#loading').fadeIn('slow');
 	
 	// Use jQuery ajax to get required content
 	$.ajax({
@@ -61,6 +74,21 @@ function getContent(ID){
 		data: {id : ID},
 		dataType: "html"
 	}).done(function(msg){
-		$('#dialog').html(msg);
+		$('#loading').fadeOut('slow',function(){
+			$('#dialog_content').html(msg);
+			var height = $('#dialog').height()+100;
+			$('#mask').css('height',height);
+			$('#dialog').fadeIn('slow');
+			$('#mask').click(function(){
+				dismissDialog();
+			});
+		});
 	});
+}
+
+function dismissDialog(){
+	$('#dialog').fadeOut('slow',function(){
+		$('#mask').fadeOut('fast');
+	});
+	adjustElements();
 }
