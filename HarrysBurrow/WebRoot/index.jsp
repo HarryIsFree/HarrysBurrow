@@ -33,14 +33,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body> 
    
-  	<%  
-  		//deal with the request check if it is valid and store it into database logs  
-		//first log this request  
-		//BurrowDAO burrowDAO = new BurrowDAO();  
-		//burrowDAO.log(request);  
-		//second check if it's valid or contains illegal arguments  
-		if(!AntiBadRequest.isLegalRequest(request)){  
-			//do something to prevent the invader from going on.  
+  	<%   
+  		//deal with the request check if it is valid and store it into database logs   
+		//first log this request   
+		//BurrowDAO burrowDAO = new BurrowDAO();   
+		//burrowDAO.log(request);   
+		//second check if it's valid or contains illegal arguments   
+		if(!AntiBadRequest.isLegalRequest(request)){   
+			//do something to prevent the invader from going on.   
 			%>
 			<script type="text/javascript">
 				window.location = 'http://harrysburrow.net';
@@ -76,24 +76,49 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<div id="main">
   	
   		<div id="intro">
-  			<div id="what" class="window">
-  				<div class="window_cover">
-  					<img src="img/index/burrow.jpg" width="250" height="300" />
-  				</div>
+  			<table id="contentTable">
+  				<tr>
+  					<td class="index">
+  						<div id="what" class="window">
+  							<div class="window_cover">
+  								<img src="img/index/burrow.jpg" width="250" height="300" />
+  							</div>
   				
-  				<div class="window_title">
-  					<font>What's This ?</font>
-  				</div>
-  			</div>
-  		
-  			<div id="who" class="window">
-  				<div class="window_cover">
-  				</div>
+  							<div class="window_title">
+  								<font>What's This ?</font>
+  							</div>
+  						</div>
+  					</td>
+  					<td class="index">
+  						<div id="who" class="window">
+  							<div class="window_cover">
+  								<img src="img/index/who.jpg"/>
+  							</div>
   				
-  				<div class="window_title">
-  					<font>Who Created This?</font>
-  				</div>
-  			</div>
+  							<div class="window_title">
+  								<font>Who Am I?</font>
+  							</div>
+  						</div>
+  					</td>
+  				</tr>
+  			</table>
+  			<br>
+  			
+  			<table>
+  				<tr>
+  					<td class="index">
+  						<div id="miui" class="window">
+  							<div class="window_cover">
+  								<div  style="width:225px;height:150px;background:url('img/index/miui.png') 0 -150 no-repeat;margin:auto;" ></div>
+  								</div>
+  				
+  							<div class="window_title">
+  								<font>MIUI in CSS</font>
+  							</div>
+  						</div>
+  					</td>
+  				</tr>
+  			</table>
   		</div>
   		
   		<div id="content">
@@ -120,11 +145,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<div id="temp"></div>
   	
   	<div id="footer" style="margin-top:150px;text-align:center;">
-  		<font style="font-family:'Arial';font-size:0.5em">©2012 <b>HarryLv</b> | Contact me at <b>1992donkey@gmail.com</b></font>
+  		<font style="font-family:'Arial';font-size:0.7em">©2012 <b>HarryLv</b> | Contact me at <b>1992donkey@gmail.com</b></font>
   		  	<script type="text/javascript">
 				var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 				document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F53fd752a54d5fc835778b3f5262689a7' type='text/javascript'%3E%3C/script%3E"));
 			</script>
+			<br>
+		<font style="font-family:'Arial';font-size:0.7em">Inspired by <b>Bret Victor</b> <a href="http://worrydream.com">worrydream.com</font>
   	</div>
   	
 	

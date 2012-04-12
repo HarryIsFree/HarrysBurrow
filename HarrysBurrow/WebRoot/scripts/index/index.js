@@ -44,6 +44,9 @@ function bindEvents(){
 		else if(id=='who'){
 			getContent(2);
 		}
+		else if(id=='miui'){
+			window.location = 'MIUI/miui.html';
+		}
 		
 	});
 	
